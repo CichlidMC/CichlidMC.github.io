@@ -1,1 +1,177 @@
-WIP
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+
+	<link rel="stylesheet" href="font-awesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="font-awesome/css/solid.min.css">
+	<link rel="stylesheet" href="font-awesome/css/brands.min.css">
+
+	<title>CichlidMC</title>
+</head>
+<body>
+
+<div class="header">
+	<div class="header-item header-title">
+		<!--TODO: icon-->
+		CichlidMC
+	</div>
+
+	<div class="header-item header-icons">
+		<a href="https://github.com/CichlidMC"><span class="header-icon fa-brands fa-github" aria-label="CichlidMC on GitHub"></span></a>
+		<a href="https://discord.gg/FGNnbr8qgw"><span class="header-icon fa-brands fa-discord" aria-label="CichlidMC on Discord"></span></a>
+	</div>
+</div>
+
+<div class="body">
+	<div class="title">
+		<h1>Cichlid</h1>
+		<p>
+			A flexible and lightweight Java mod-loader for Minecraft, built from the ground-up.
+		</p>
+	</div>
+
+	<div class="box-row">
+		<div class="notice">
+			<h1><span>⚠️</span> Notice</h1>
+			<p>
+				Cichlid is currently in an alpha state. It's not complete, and there's a lot of rough edges.
+				It's not recommended for new players or modders right now.
+			</p>
+			<p>
+				Even this website is very barebones currently. It's mostly oriented towards those who are already modders.
+				More will come in the future, but as always, things take time, and time is limited.
+			</p>
+			<p>
+				If you're still interested, feel free to try it out.
+				If you need some help or have feedback, please let us know on <a href="https://discord.gg/FGNnbr8qgw">Discord</a>!
+			</p>
+		</div>
+
+		<div class="notice">
+			<h1><span>⚠️</span> Notice Squared</h1>
+			<p>
+				Cichlid is not intended to go live until BlanketCon 25. If you happen to stumble upon this page before
+				then, please keep it to yourself. Information on this page may be inaccurate before then.
+			</p>
+		</div>
+	</div>
+
+	<div class="box-row info-box-row">
+		<div class="info-box">
+			<h1>So, what is it?</h1>
+			<p>
+				Cichlid is a brand-new mod-loader for Minecraft, built from the ground-up. It takes a lot of inspiration from
+				existing projects though. There's a lot that's already been done right, but just as much has room for improvement.
+			</p>
+
+			<h1>Seriously? <i>Another</i> mod loader?</h1>
+			<p>
+				Hello! TropheusJ, the creator of Cichlid, speaking (well, typing).
+			</p>
+			<p>
+				Yes, another loader. Sorry.
+			</p>
+			<p>
+				Cichlid was created out of a desire for something better. Existing loaders are functional, sure.
+				Most people would even argue that one is good and the other is bad. Even I have my preference, but it's pick-your-poison.
+				There's a lot that I am dissatisfied with on both the Fabric and Neoforge sides.
+				Things that are effectively impossible to change at this point.
+			</p>
+			<p>
+				I could just go on with my life and deal with it, but I have an opportunity to make modding more enjoyable.
+				For myself, and maybe others too. I feel like not trying would be foolish. And so, behold. Cichlid.
+			</p>
+			<p>
+				My main goal with this project is to improve the modding experience.
+				Even if that's done by salvaging it for parts later down the line, I'd consider it a success.
+			</p>
+			<p>
+				- TropheusJ
+			</p>
+
+			<h1>Cool. What makes it special?</h1>
+			<h3>Java Agent</h3>
+			<p>
+				Cichlid is a Java Agent. If you're unaware, the Java Agent API is Java's officially supported method of
+				modifying ("instrumenting") existing Java programs. It has everything you need for a mod loader, without
+				commiting atrocities against classloaders.
+			</p>
+			<p>
+				Standalone Cichlid is capable of loading on every version of Minecraft, although the tooling for mods isn't quite there yet.
+				It's barely even tied to Minecraft, it would be almost trivial to disconnect it in a fork.
+				It's also nearly futureproof, with the only problem being Java version bumps.
+			</p>
+
+			<h3>First-class Mojmap</h3>
+			<p>
+				Sorry Fabric, point for Neoforge. Yarn should've been dropped years ago.
+			</p>
+			<p>
+				Mojmap is king in the Cichlid ecosystem. Mods are compiled to it, Cichlid remaps the game to it,
+				and it's all that's currently supported by CichlidGradle.
+			</p>
+			<p>
+				It's planned but low priority for it to be possible to use different mappings in development environments.
+				Parchment support is high priority.
+			</p>
+
+			<h3>Brand-new Gradle plugin</h3>
+			<p>
+				CichlidGradle is Cichlid's Gradle plugin for mod development. It's been designed from the ground-up
+				using modern Gradle best practices. It's fully configuration cache compatible, touches 0 Gradle internals,
+				and <i>probably</i> won't deal psychic damage as you use it.
+			</p>
+
+			<h3>Loader Plugins</h3>
+			<p>
+				Plot twist: Cichlid doesn't actually load mods*. Cichlid loads plugins, which load mods.
+			</p>
+			<p>
+				Plugins fully determine how each file in the mods folder is handled, and can also find mods outside of it.
+				Plugin that loads resource packs as mods? Sure. Plugin that compiles source code? Why not.
+				Plugin that loads groovy scripts? If you insist.
+			</p>
+			<p>
+				*it does have a built-in plugin for standard mods, don't worry
+			</p>
+
+			<h3>Conditional Dependencies</h3>
+			<p>
+				Mods and plugins can finally have dependencies only apply in certain cases.
+				Some examples include a client-side dependency, or an incompatibility that only triggers when a 3rd mod is not present.
+			</p>
+
+			<h3>FlexVer</h3>
+			<p>
+				Cichlid uses <a href="https://github.com/unascribed/FlexVer">FlexVer by unascribed</a>, which is a flexible
+				SemVer-compatible versioning scheme. It lets mods and plugins declare their versions however they want,
+				while still producing reasonable comparisons.
+			</p>
+
+			<h3>Introducing Sushi</h3>
+			<p>
+				Sushi is a bytecode transformation framework built from the ground-up.
+			</p>
+			<p>
+				Sushi is data-driven, extensible, and flexible. It's designed to be a replacement for Mixin (+Extras)
+				that maintains the compatibility and flexibility while allowing for new opportunities.
+			</p>
+
+			<h1>That's great and all, how do I use it</h1>
+			<p>
+				If you're a player, you probably shouldn't. There's still a lot of work before Cichlid is ready for the average mod user.
+				And there's no mods for it yet anyway, so...
+			</p>
+			<p>
+				If you're a modder, you're welcome to give it a try if interested.
+				You can find the template mod <a href="https://github.com/CichlidMC/cichlid-template-mod">here</a>.
+				Join us on <a href="https://discord.gg/FGNnbr8qgw">Discord</a> if you run into any problems.
+			</p>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
