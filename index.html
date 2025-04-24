@@ -40,7 +40,7 @@
 				It's not recommended for new players or modders right now.
 			</p>
 			<p>
-				Even this website is very barebones currently. It's mostly oriented towards those who are already modders.
+				Even this website is basically a placeholder right now. It's mostly oriented towards those who are already modders.
 				More will come in the future, but as always, things take time, and time is limited.
 			</p>
 			<p>
@@ -120,7 +120,7 @@
 			<h3>Brand-new Gradle plugin</h3>
 			<p>
 				CichlidGradle is Cichlid's Gradle plugin for mod development. It's been designed from the ground-up
-				using modern Gradle best practices. It's fully configuration cache compatible, touches 0 Gradle internals,
+				using modern Gradle best practices. It's fully configuration cache compatible, does no work during configuration,
 				and <i>probably</i> won't deal psychic damage as you use it.
 			</p>
 
@@ -156,7 +156,16 @@
 			</p>
 			<p>
 				Sushi is data-driven, extensible, and flexible. It's designed to be a replacement for Mixin (+Extras)
-				that maintains the compatibility and flexibility while allowing for new opportunities.
+				that maintains the compatibility and flexibility while allowing for new opportunities, such as...
+			</p>
+
+			<h3>Source-visible Transformations</h3>
+			<p>
+				<i>Disclaimer: this is still WIP as of writing this, but it's actively in development.</i>
+			</p>
+			<p>
+				Sushi was created so bytecode transformations can be safely applied to source code in development environments, finally
+				bringing transforming up to par with patching.
 			</p>
 
 			<h1>That's great and all, how do I use it</h1>
@@ -166,8 +175,8 @@
 			</p>
 			<p>
 				If you're a modder, you're welcome to give it a try if interested.
-				You can find the template mod <a href="https://github.com/CichlidMC/cichlid-template-mod">here</a>.
-				Join us on <a href="https://discord.gg/FGNnbr8qgw">Discord</a> if you run into any problems.
+				There's no template mod yet, but you can see a sample in the <a href="https://github.com/CichlidMC/CichlidGradle">CichlidGradle root project</a>.
+				Join us on <a href="https://discord.gg/FGNnbr8qgw">Discord</a> if you want further information.
 			</p>
 		</div>
 	</div>
