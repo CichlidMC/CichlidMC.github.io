@@ -71,7 +71,7 @@
 				Hello! TropheusJ, the creator of Cichlid, speaking (well, typing).
 			</p>
 			<p>
-				Yes, another loader. Sorry.
+				Yes! Another loader. (Sorry).
 			</p>
 			<p>
 				Cichlid was created out of a desire for something better. Existing loaders are functional, sure.
@@ -92,6 +92,32 @@
 			</p>
 
 			<h1>Cool. What makes it special?</h1>
+
+			<h2>Philosophy</h2>
+			<h3>Lightweight</h3>
+			<p>
+				Cichlid will always be lightweight and unintrusive. It should never get it your way while developing,
+				and it should be nearly invisible when no mods are installed.
+			</p>
+
+			<h3>Embrace Vanilla</h3>
+			<p>
+				Cichlid embraces vanilla's designs. APIs should be additive, extending what's already there, not replacing it.
+			</p>
+
+			<h3>Keep Moving Forward</h3>
+			<p>
+				Cichlid doesn't hold on to the past.
+			</p>
+			<p>
+				There will never be an official "LTS" modding version. The main supported version will always be the newest one.
+			</p>
+			<p>
+				No component of Cichlid is set in stone. If drastic changes would improve the project, they'll be made.
+			</p>
+
+			<h2>Actual Features</h2>
+
 			<h3>Java Agent</h3>
 			<p>
 				Cichlid is a Java Agent. If you're unaware, the Java Agent API is Java's officially supported method of
@@ -100,7 +126,7 @@
 			</p>
 			<p>
 				Standalone Cichlid is capable of loading on every version of Minecraft, although the tooling for mods isn't quite there yet.
-				It's barely even tied to Minecraft, it would be almost trivial to disconnect it in a fork.
+				It's barely even tied to Minecraft, it would be pretty trivial to disconnect it in a fork.
 				It's also nearly futureproof, with the only problem being Java version bumps.
 			</p>
 
@@ -130,7 +156,7 @@
 			</p>
 			<p>
 				Plugins fully determine how each file in the mods folder is handled, and can also find mods outside of it.
-				Plugin that loads resource packs as mods? Sure. Plugin that compiles source code? Why not.
+				Plugin that loads datapacks as mods? Sure. Plugin that compiles source code? Why not.
 				Plugin that loads groovy scripts? If you insist.
 			</p>
 			<p>
@@ -164,8 +190,11 @@
 				<i>Disclaimer: this is still WIP as of writing this, but it's actively in development.</i>
 			</p>
 			<p>
-				Sushi was created so bytecode transformations can be safely applied to source code in development environments, finally
-				bringing transforming up to par with patching.
+				Sushi was primarily created so bytecode transformations can be safely applied to source code in development
+				environments, finally bringing transforming up to par with patching.
+			</p>
+			<p>
+				Transformers from both your own project and its libraries will be visible in Minecraft sources.
 			</p>
 
 			<h1>That's great and all, how do I use it</h1>
